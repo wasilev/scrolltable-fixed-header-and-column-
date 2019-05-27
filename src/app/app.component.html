@@ -1,0 +1,25 @@
+<div class="wrapper" #wrapperElement>
+	<div class="container" perfectScrollbar (ps-scroll-y)="onScrollY($event)" (ps-scroll-x)="onScrollX($event)" #containerElement>
+		<div class="header" #headerElement>
+			<div class="cell" *ngFor="let cell of header; let index = index; let first = first" [class.header-cell-first]="first">
+				<ng-container *ngIf="!first">
+					h {{index}}
+				</ng-container>
+			</div>
+		</div>
+		<div class="body">
+			<div class="first-column" #firstColumnElement>
+				<div class="cell-first-column" *ngFor="let cell of firstColumn; let index = index; let first = first" [class.column-cell-first]="first">
+					No. {{index+1}}
+				</div>
+			</div>
+			<div class="grid">
+				<div class="row" *ngFor="let row of array2; let rowIndex = index">
+					<div class="cell" *ngFor="let cell of row.cells; let cellIndex = index">
+						{{rowIndex * columnCount + cellIndex + 1}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

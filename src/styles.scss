@@ -1,0 +1,15 @@
+/* scrollbar */
+.ps__rail-x, .ps__rail-y {
+  z-index: 2;
+}
+
+.ps__rail-x {
+  bottom: 0;
+  top: auto;
+}
+
+.ps__rail-y {
+  right: 0;
+  
+  left: auto;
+}

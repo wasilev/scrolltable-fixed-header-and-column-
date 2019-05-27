@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid;
+  width: fit-content;
+  background-color: #ffffff;
+}
+
+.body {
+  display: flex;
+}
+
+.first-column {
+  background-color: #ffffff;
+}
+
+.row {
+  display: flex;
+}
+
+.cell, .cell-first-column {
+  width: 80px;
+  min-width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row:not(:last-child) > .cell {
+  border-bottom: 1px solid;
+}
+
+.cell-first-column {
+  border-right: 1px solid;
+}
+
+.cell:not(:last-child) {
+  border-right: 1px solid;
+}
+
+.cell-first-column:not(:last-child) {
+  border-bottom: 1px solid;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.header-sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.column-sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.column-sticky > .header-cell-first {
+  background-color: #ffffff;
+  border-bottom: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31px;
+  z-index: 1;
+}
+
+.column-sticky > .column-cell-first {
+  margin-top: 31px;
+}
